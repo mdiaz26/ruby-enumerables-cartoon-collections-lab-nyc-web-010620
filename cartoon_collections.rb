@@ -14,6 +14,12 @@ end
 
 def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  if array.include?(cheese_types.each_with_index {|cheese, index| return cheese[index]})
+  count = 0 
+  while count < cheese_types.length
+  cheese = cheese_types[count]
+  if array.include?(cheese)
+    return cheese
+  end
+  count += 1 
   end
 end
